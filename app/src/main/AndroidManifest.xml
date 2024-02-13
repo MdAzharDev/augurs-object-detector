@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.tutorials.objectdetection">
+
+    <!-- Enable instant app support -->
+    <dist:module dist:instant="true" />
+
+    <uses-feature android:name="android.hardware.camera" /> <!-- Declare permissions -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+
+    <application
+        android:name=".MyApp"
+        android:icon="@drawable/augurs_logo"
+        android:roundIcon="@drawable/augurs_logo"
+        android:label="@string/app_name"
+        android:allowBackup="true"
+        android:taskAffinity=""
+
+        tools:ignore="AllowBackup">
+
+        <activity
+            android:name="com.tutorials.objectdetection.MainActivity"
+            android:clearTaskOnLaunch="true"
+            android:theme="@style/AppTheme"
+            android:exported="true"
+            android:icon="@drawable/augurs_logo"
+            android:rotationAnimation="seamless"
+            android:resizeableActivity="true"
+            android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize"
+            tools:targetApi="O">
+
+            <!-- Main app intent filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- Declare notch support -->
+            <meta-data android:name="android.notch_support" android:value="true"/>
+
+        </activity>
+
+    </application>
+
+</manifest>
