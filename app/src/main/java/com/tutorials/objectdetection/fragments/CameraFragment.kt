@@ -1,4 +1,3 @@
-
 package com.tutorials.objectdetection.fragments
 
 import android.annotation.SuppressLint
@@ -17,6 +16,7 @@ import androidx.camera.core.CameraSelector
 import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.ImageAnalysis.OUTPUT_IMAGE_FORMAT_RGBA_8888
 import androidx.camera.core.ImageProxy
+
 import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
